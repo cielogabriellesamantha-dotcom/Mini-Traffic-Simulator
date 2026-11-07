@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MINI TRAFFIC SIMULATOR</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="header">
+        <h1>MINI TRAFFIC SIMULATOR</h1>
+        <h2>Traffic Intersection</h2>
+    </div>
+
+    <main>
+
+    <section>
+        <h2>Traffic Intersection</h2>
+
+        <div class="road">
+
+            <div class="traffic-light">
+                <div id="redLight" class="light"></div>
+                <div id="yellowLight" class="light"></div>
+                <div id="greenLight" class="light"></div>
+            </div>
+
+            <div class="road-line"></div>
+
+            <div class="vehicle car">🚗</div>
+            <div class="vehicle motorcycle">🏍️</div>
+
+        </div>
+
+        <div id="back">
+            <div class="buttons">
+                <button class="stop-btn" id="stopBtn">STOP</button>
+                <button class="wait-btn" id="waitBtn">WAIT</button>
+                <button class="go-btn" id="goBtn">GO</button>
+                <button class="reset-btn" id="resetBtn">RESET</button>
+            </div>
+        </div>
+
+        <h2 id="message">WAITING FOR INPUT...</h2>
+
+    </section>
+
+    <hr>
+
+    <section class="registration">
+
+        <h1 class="form-title">Vehicle Registration Form</h1>
+
+        <form id="registrationForm">
+
+            <label for="name"><b>Driver's Name:</b></label>
+            <input type="text" id="name" name="name"
+                placeholder="Enter your full name" required>
+
+            <label for="vehicleType"><b>Vehicle Type:</b></label>
+            <select id="vehicleType" name="vehicleType" required>
+                <option value="Car">Car</option>
+                <option value="Motorcycle">Motorcycle</option>
+                <option value="Bus">Bus</option>
+                <option value="Truck">Truck</option>
+            </select>
+
+            <label for="destination"><b>Destination:</b></label>
+            <select id="destination" name="destination" required>
+                <option value="North">North</option>
+                <option value="South">South</option>
+                <option value="East">East</option>
+                <option value="West">West</option>
+            </select>
+
+            <label for="purpose"><b>Purpose of Travel:</b></label>
+            <select id="purpose" name="purpose" required>
+                <option value="Personal">Personal</option>
+                <option value="School">School</option>
+                <option value="Business">Business</option>
+            </select>
+
+            <div class="button-container">
+                <input type="submit" value="REGISTER VEHICLE" class="submit">
+            </div>
+
+        </form>
+
+        <div id="registrationResult" aria-live="polite"></div>
+
+    </section>
+
+    </main>
+
+</body>
+</html>
